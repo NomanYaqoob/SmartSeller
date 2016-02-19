@@ -1,0 +1,32 @@
+<ion-view view-title="Admin Panel">
+    <ion-content>
+        <ion-list >
+            <ion-item>
+                <div class="row">
+                    <div class="col">
+                        <strong>Full Name</strong>
+                    </div>
+                    <div class="col">
+                        <strong>Email</strong>
+                    </div>
+                    <div class="col">
+                        <strong>Unique Ids</strong>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item ng-repeat="seller in sellers">
+                <div class="row">
+                    <div class="col">
+                        {{seller.FirstName + " " + seller.LastName}}
+                    </div>
+                     <div class="col">
+                        {{seller.Email}}
+                    </div>
+                     <div class="col">
+                        {{seller._id}}
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

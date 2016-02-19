@@ -1,0 +1,40 @@
+<ion-view view-title="Products">
+	<ion-content>
+		<br>
+		<div style="text-align:center;">
+			<h3>Products Details</h3>
+		</div>
+		<br>
+
+		<div class="row">
+			<div class="col col-75 col-offset-10">
+				<div class="list list-inset">
+					<label class="item item-input item-floating-label">
+						<span class="input-label">Name</span>
+						<input type="text" placeholder="Name" ng-model='products.Name'>
+					</label>
+					<label class="item item-input item-floating-label">
+						<span class="input-label">Description</span>
+						<input type="text" placeholder="Description" ng-model="products.Description">
+					</label>
+					<label class="item item-input item-floating-label">
+						<span class="input-label">Price</span>
+						<input type="text" placeholder="Price" ng-model="products.Price">
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col col-offset-33 col-20">
+				<button class="button button-block button-positive" ng-click="addProduct()">
+					Add Product
+				</button>
+			</div>
+            <div class="col col-offset-25">
+                <button class="button button-positive" ui-sref="panel">
+					Admin Panel
+				</button>
+            </div>
+		</div>
+	</ion-content>
+</ion-view>

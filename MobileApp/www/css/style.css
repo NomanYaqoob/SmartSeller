@@ -1,0 +1,31 @@
+/* Empty. Add your own CSS if you like */
+
+
+.login {
+  background: #414047;
+}
+
+.logo-login {
+  text-align: center;
+}
+
+.button-color {
+  background: #7ecdee;
+  color: white;
+  width: 40%;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.button-color:hover{
+  color: white;
+}
+.button-color:active {
+  background: #6fb4d1;
+}
+
+.button.activated {
+  background-color: #6fb4d1;
+}
+

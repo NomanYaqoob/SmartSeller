@@ -1,0 +1,27 @@
+<ion-view view-title="Services">
+  <ion-nav-buttons side="right">
+    <button class="button" ng-click="data.showReorder = !data.showReorder">Reorder</button>
+  </ion-nav-buttons>
+  <ion-content>
+
+    <div class="row">
+      <div class="col text-center">
+        <h3 style="padding: 5px; margin:0.5% 1%"><strong>Company Products</strong></h3>
+      </div>
+    </div>
+
+    <ion-list show-reorder="data.showReorder" class="item-icon-left">
+
+      <ion-item ng-repeat="product in products" >
+        <div href="" ng-click="openModal(product)">
+          <h2><strong>Name: </strong>{{product.Name}}</h2>
+          <span><strong>Price: </strong>{{product.Price}}</span>
+          <p><strong>Description: </strong>{{product.Description}}</p>
+        </div>
+        </ion-delete-button>
+        <ion-reorder-button class="ion-navicon" on-reorder="reorderItem(product, $fromIndex, $toIndex)">
+        </ion-reorder-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

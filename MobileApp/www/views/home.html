@@ -1,0 +1,40 @@
+<ion-side-menus enable-menu-with-back-views="true">
+  <ion-side-menu-content drag-content="false">
+    <ion-nav-bar class="bar bar-dark">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="homeContent"></ion-nav-view>
+  </ion-side-menu-content>
+  <ion-side-menu side="left">
+    <ion-content>
+      <div class="item item-body logo-login">
+        <img width="" src="./img/ionic.png">
+        <h2 class="">Smart Sellers</h2>
+        <p class="">Work Smart</p>
+
+      </div>
+      <div class="list">
+
+        <a class="item item-icon-left" ui-sref="home.services" menu-close>
+          <i class="icon ion-email"></i>
+          Services
+        </a>
+        <a class="item item-icon-left" ui-sref="home.order" menu-close>
+          <i class="icon ion-android-archive"></i>
+          Checkout
+        </a>
+        <div class="item item-divider">
+          User Portion
+        </div>
+        <a class="item item-icon-left" href="#">
+          <i class="icon ion-person-stalker"></i>
+          Friends
+        </a>
+      </div>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

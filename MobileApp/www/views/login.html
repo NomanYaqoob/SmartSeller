@@ -1,0 +1,22 @@
+<ion-view view-title="Login">
+  <ion-content class="login">
+    <br/>
+    <div class="logo-login">
+      <img src="./img/ionic.png" alt=""/>
+      <p>A smarter way to get orders</p>
+    </div>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input type="text" placeholder="Email" ng-model="seller.email">
+      </label>
+      <label class="item item-input">
+        <input type="password" placeholder="Password" ng-model="seller.password">
+      </label>
+    </div>
+    <div class="row text-center">
+      <div class="col">
+        <button class="button button-color" ng-click="login()">Login</button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
