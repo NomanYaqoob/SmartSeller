@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic'])
+angular.module('starter', ['ionic','firebase'])
     .config(function ($stateProvider, $urlRouterProvider) {
 
 

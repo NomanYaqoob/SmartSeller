@@ -1,4 +1,5 @@
 angular.module('starter')
+.constant("ref","https://demosmartsellers.firebaseio.com/")
 	.controller("loginCtrl", function ($scope, $http, $state, $ionicPopup) {
 		$scope.user = {};
 		$scope.doLogin = function () {
@@ -181,12 +182,13 @@ angular.module('starter')
 	})
 
 
-
-
-
-    .controller("PanelController", function ($scope, $http, $ionicPopup) {
+    .controller("PanelController", function ($scope, $http, $ionicPopup,$firebaseArray,ref) {
 
 		$scope.sellers = {};
+		var firebaseRef = new Firebase(ref).child('orders');
+		$scope.orders = $firebaseArray(firebaseRef);
+		console.log((firebaseRef).toString());
+		console.log($scope.orders)
         var FirebaseToken = localStorage.getItem("userLog");
         $http.get("/api/getsellers", {
             params: {

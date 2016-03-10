@@ -1,32 +1,53 @@
 <ion-view view-title="Admin Panel">
     <ion-content>
-        <ion-list >
-            <ion-item>
-                <div class="row">
-                    <div class="col">
-                        <strong>Full Name</strong>
-                    </div>
-                    <div class="col">
-                        <strong>Email</strong>
-                    </div>
-                    <div class="col">
-                        <strong>Unique Ids</strong>
+        <h2>Sellers:</h2>
+        <div class="row">
+            <div class="col text-center">
+                <ion-list>
+                    <ion-item>
+                        <div class="row">
+                            <div class="col">
+                                <strong>Full Name</strong>
+                            </div>
+                            <div class="col">
+                                <strong>Email</strong>
+                            </div>
+                            <div class="col">
+                                <strong>Unique Ids</strong>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item ng-repeat="seller in sellers">
+                        <div class="row">
+                            <div class="col">
+                                {{seller.FirstName + " " + seller.LastName}}
+                            </div>
+                            <div class="col">
+                                {{seller.Email}}
+                            </div>
+                            <div class="col">
+                                {{seller._id}}
+                            </div>
+                        </div>
+                    </ion-item>
+                </ion-list>
+            </div>
+        </div>
+        <div class="row" ng-repeat="order in orders">
+            <strong>Total: {{order.Total}}</strong>
+            <div class="col" ng-repeat="orders in order.Orders">
+                <div class="card">
+                    <div class="item item-text-wrap">
+                        Name: {{orders.product.Name}} <br>
+                        Price : {{orders.product.Price}} <br>
+                        Description : {{orders.product.Description}} <br>
+                        Quantity : {{orders.quantity}}
                     </div>
                 </div>
-            </ion-item>
-            <ion-item ng-repeat="seller in sellers">
-                <div class="row">
-                    <div class="col">
-                        {{seller.FirstName + " " + seller.LastName}}
-                    </div>
-                     <div class="col">
-                        {{seller.Email}}
-                    </div>
-                     <div class="col">
-                        {{seller._id}}
-                    </div>
-                </div>
-            </ion-item>
-        </ion-list>
+            </div>
+            <div class="col">
+                
+            </div>
+        </div>
     </ion-content>
 </ion-view>
